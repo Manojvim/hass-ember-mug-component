@@ -52,11 +52,11 @@
         "name": "Temperature preset",
         "state": {
           "latte": "Latte",
+          "black-tea": "Black Tea",
           "cappuccino": "Cappuccino",
           "coffee": "Coffee",
-          "black-tea": "Black Tea",
-          "green-tea": "Green Tea",
-          "ginger-tea": "Ginger Tea"
+          "ginger-tea": "Ginger Tea",
+          "green-tea": "Green Tea"
         }
       },
       "temperature_unit": {
