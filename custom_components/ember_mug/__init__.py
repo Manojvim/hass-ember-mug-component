@@ -20,6 +20,7 @@ from homeassistant.const import (
     EVENT_HOMEASSISTANT_STOP,
     Platform,
 )
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.exceptions import ConfigEntryNotReady
 from homeassistant.util.unit_system import METRIC_SYSTEM
 
@@ -28,7 +29,6 @@ from .coordinator import MugDataUpdateCoordinator
 
 if TYPE_CHECKING:
     from home_assistant_bluetooth import BluetoothServiceInfoBleak
-    from homeassistant.config_entries import ConfigEntry
     from homeassistant.core import Event, HomeAssistant
 
 
