@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING, Any
 
 import voluptuous as vol
 from bleak import BleakClient, BleakError
+from bleak_retry_connector import establish_connection
 from ember_mug.consts import DEVICE_SERVICE_UUIDS
 from ember_mug.utils import get_model_info_from_advertiser_data
 from homeassistant import config_entries
@@ -55,11 +56,13 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         self._abort_if_unique_id_configured()
 
         try:
-            async with BleakClient(discovery_info.device) as client:
-                await client.connect()
-                with contextlib.suppress(BleakError, EOFError):
-                    await client.pair()
-        except BleakError:
+            async with establish_connection(
+                BleakClient,
+                discovery_info.device,
+                discovery_info.address,
+            ) as client:
+                await client.pair()
+        except (BleakError, Exception):
             self.async_abort(reason="cannot_connect")
 
         self._discovery_info = discovery_info
@@ -104,11 +107,13 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     )
                     continue
                 try:
-                    async with BleakClient(service_info.device) as client:
-                        await client.connect()
-                        with contextlib.suppress(BleakError, EOFError):
-                            await client.pair()
-                except BleakError:
+                    async with establish_connection(
+                        BleakClient,
+                        service_info.device,
+                        service_info.address,
+                    ) as client:
+                        await client.pair()
+                except (BleakError, Exception):
                     self.async_abort(reason="cannot_connect")
                 self._discovery_info = service_info
                 break
