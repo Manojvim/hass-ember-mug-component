@@ -1,6 +1,6 @@
 """Constants used for mug."""
 
-from enum import StrEnum
+from enum import Enum
 from typing import Final
 
 from ember_mug.consts import LiquidState
@@ -35,7 +35,7 @@ DEFAULT_PRESETS = {
 }
 
 
-class LiquidStateValue(StrEnum):
+class LiquidStateValue(str, Enum):
     """Options for liquid state."""
 
     STANDBY = "standby"
