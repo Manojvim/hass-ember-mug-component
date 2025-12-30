@@ -31,6 +31,7 @@ DEFAULT_PRESETS = {
     "coffee": 57,
     "black-tea": 58.5,
     "green-tea": 59,
+    "ginger-tea": 59.5,
 }
 
 

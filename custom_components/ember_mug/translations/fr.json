@@ -30,14 +30,22 @@
   },
   "entity": {
     "binary_sensor": {
-      "low_battery": { "name": "Batterie faible" },
-      "power": { "name": "Alimentation" }
+      "low_battery": {
+        "name": "Batterie faible"
+      },
+      "power": {
+        "name": "Alimentation"
+      }
     },
     "light": {
-      "led": { "name": "DEL" }
+      "led": {
+        "name": "DEL"
+      }
     },
     "number": {
-      "target_temp": { "name": "Température cible" }
+      "target_temp": {
+        "name": "Température cible"
+      }
     },
     "select": {
       "temperature_preset": {
@@ -47,10 +55,13 @@
           "cappuccino": "Cappuccino",
           "coffee": "Café",
           "black-tea": "Thé noir",
-          "green-tea": "Thé vert"
+          "green-tea": "Thé vert",
+          "ginger-tea": "Thé de gingembre"
         }
       },
-      "temperature_unit": { "name": "Unité de température" },
+      "temperature_unit": {
+        "name": "Unité de température"
+      },
       "volume_level": {
         "name": "Niveau de volume",
         "state": {
@@ -64,15 +75,23 @@
       "battery_percent": {
         "name": "Batterie",
         "state_attributes": {
-          "battery_voltage": { "name": "Voltage de batterie" }
+          "battery_voltage": {
+            "name": "Voltage de batterie"
+          }
         }
       },
-      "current_temp": { "name": "Température actuel" },
+      "current_temp": {
+        "name": "Température actuel"
+      },
       "liquid_level": {
         "name": "Niveau de liquide",
         "state_attributes": {
-          "raw_liquid_level": { "name": "Niveau du liquide brute" },
-          "capacity": { "name": "Capacitée (ml)" }
+          "raw_liquid_level": {
+            "name": "Niveau du liquide brute"
+          },
+          "capacity": {
+            "name": "Capacitée (ml)"
+          }
         }
       },
       "state": {
@@ -80,7 +99,7 @@
         "state": {
           "empty": "Vide",
           "filling": "Remplissage",
-          "cold_no_control":  "Froid (sans contrôle)",
+          "cold_no_control": "Froid (sans contrôle)",
           "cooling": "Refroidissement",
           "heating": "Chauffage",
           "perfect": "Parfait",
@@ -105,19 +124,33 @@
               "white": "Blanche"
             }
           },
-          "date_time_zone": { "name": "Date et fuseau horaire" },
-          "dsk": { "name": "DSK" },
-          "firmware_info": { "name": "Informations sur le micrologiciel"},
-          "raw_state": { "name": "État brute" },
-          "udsk": { "name": "UDSK" }
+          "date_time_zone": {
+            "name": "Date et fuseau horaire"
+          },
+          "dsk": {
+            "name": "DSK"
+          },
+          "firmware_info": {
+            "name": "Informations sur le micrologiciel"
+          },
+          "raw_state": {
+            "name": "État brute"
+          },
+          "udsk": {
+            "name": "UDSK"
+          }
         }
       }
     },
     "switch": {
-      "temperature_control": {"name":  "Contrôle de la température"}
+      "temperature_control": {
+        "name": "Contrôle de la température"
+      }
     },
     "text": {
-      "name": { "name": "Nom" }
+      "name": {
+        "name": "Nom"
+      }
     }
   }
 }
