@@ -32,7 +32,7 @@ if TYPE_CHECKING:
     from homeassistant.core import Event, HomeAssistant
 
 
-type EmberMugConfigEntry = ConfigEntry[MugDataUpdateCoordinator]
+EmberMugConfigEntry = ConfigEntry[MugDataUpdateCoordinator]
 
 
 PLATFORMS = [
